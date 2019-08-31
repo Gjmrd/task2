@@ -6,7 +6,7 @@ class PhoneBook {
     private HashMap<String, ArrayList<String>> phoneNumbers;
 
     private PhoneBook () {
-        phoneNumbers = new HashMap<>();
+        phoneNumbers = new HashMap<String, ArrayList<String>>();
         phoneNumbers.put("Иванов И.И.", new ArrayList<String>() {{
             add("+8 800 2000 500");
             add("+8 800 200 600");

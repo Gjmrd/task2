@@ -21,7 +21,7 @@ public class Task2Test {
 
     @Test
     public void main() {
-        String[] args = new String[] { "Иванов И.И."};
+        String[] args = new String[] {"Иванов И.И."};
         Task2.main(args);
         Assert.assertEquals("1. +8 800 2000 500\r\n2. +8 800 200 600\r\n", outContent.toString());
     }
