@@ -33,5 +33,11 @@ public class Task2Test {
         Assert.assertEquals("No numbers for Кабачков К.К.\r\n", outContent.toString());
     }
 
+    @Test
+    public void mainWithNoArgs() {
+        String[] args = new String[]{};
+        Task2.main(args);
+        Assert.assertEquals("missing argument\r\n", outContent.toString());
+    }
 
 }
