@@ -28,9 +28,8 @@ public class Task2Test {
     }
 
     @Test
-    public void mainWithNoNumbers() {
-        String[] args = new String[] {"Кабачков К.К."};
-        Task2.main(args);
+    public void noNumbers() {
+        Task2.printNumbersFor("Кабачков К.К.");
         Assert.assertEquals(String.format("No numbers for Кабачков К.К.%s", lineSeparator), outContent.toString());
     }
 
