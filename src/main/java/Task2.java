@@ -14,7 +14,7 @@ public class Task2 {
         PhoneBook phoneBook = PhoneBook.getInstance();
         ArrayList<String> phoneNumbers = phoneBook.getPhoneNumbers().get(name);
 
-        if (phoneNumbers != null && phoneNumbers.size() > 0) {
+        if (phoneNumbers != null && !phoneNumbers.isEmpty()) {
             for (int index = 1; index <= phoneNumbers.size(); index++) {
                 System.out.println(String.format("%d. %s", index, phoneNumbers.get(index - 1)));
             }
