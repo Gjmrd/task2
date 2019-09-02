@@ -15,8 +15,8 @@ public class Task2 {
         ArrayList<String> phoneNumbers = phoneBook.getPhoneNumbers().get(name);
 
         if (phoneNumbers != null && !phoneNumbers.isEmpty()) {
-            for (int index = 1; index <= phoneNumbers.size(); index++) {
-                System.out.println(String.format("%d. %s", index, phoneNumbers.get(index - 1)));
+            for (int index = 0; index < phoneNumbers.size(); index++) {
+                System.out.println(String.format("%d. %s", index + 1, phoneNumbers.get(index)));
             }
         } else {
             System.out.println("No numbers for " + name);
