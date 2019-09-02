@@ -2,6 +2,7 @@ import org.junit.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 
 public class Task2Test {
@@ -28,8 +29,20 @@ public class Task2Test {
     }
 
     @Test
+    public void getNumbersFor() {
+        ArrayList<String> numbers = Task2.getNumbersFor("Иванов И.И.");
+        ArrayList<String> expected = new ArrayList<String>() {{
+            add("+8 800 2000 500");
+            add("+8 800 200 600");
+        }};
+
+        Assert.assertEquals(numbers, expected);
+    }
+
+    @Test
     public void noNumbers() {
-        Task2.printNumbersFor("Кабачков К.К.");
+        String[] args = new String[] {"Кабачков К.К."};
+        Task2.main(args);
         Assert.assertEquals(String.format("No numbers for Кабачков К.К.%s", lineSeparator), outContent.toString());
     }
 
