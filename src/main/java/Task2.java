@@ -3,6 +3,9 @@ import java.util.ArrayList;
 
 
 public class Task2 {
+
+    private static final PhoneBook phoneBook = PhoneBook.getInstance();
+
     public static void main(String args[]) {
         if (args.length == 0) {
             System.out.println("missing argument");
@@ -21,6 +24,6 @@ public class Task2 {
     }
 
     public static ArrayList<String> getNumbersFor(String name) {
-        return PhoneBook.getInstance().getPhoneNumbers().get(name);
+        return phoneBook.getPhoneNumbers().get(name);
     }
 }
